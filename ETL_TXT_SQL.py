@@ -1,5 +1,6 @@
 #Primeiramente vamos importar as bibliotecas
 #Pyodbc irá realizar a conexão com o sgdb, urllib realizará o download do TXT, pandas manipulará os dados, tqdm para mostrar visualmente o avanço da ETL
+#Obviamente por motivos de compliance, mascarei o IP e nomes das tabelas utilizadas na minha empresa
 
 import pyodbc
 from urllib import request
@@ -12,7 +13,7 @@ from time import sleep
 #No meu caso não é necessária autenticação com usuário e senha, pois é um servidor SQL Server local, sugiro ler a documentação oficial da pyodbc para escalar conforme necessário
 dados_conexao = (
     "Driver={SQL Server};"
-    "Server=ANALISTA-143A;"
+    "Server=ANALISTA-122U;"
     "Database=BASES"
 )
 conexao = pyodbc.connect(dados_conexao)
